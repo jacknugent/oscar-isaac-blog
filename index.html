@@ -290,12 +290,7 @@ pre {
     top: 0;
     z-index:10000000000000000000001;
 }
- 
-nav {
-    transform:translateY(-50%);
-    margin-top:50vh;
-}
- 
+
 nav i {
     font-size:1.2em;
     color:{color:background};
@@ -324,31 +319,6 @@ nav i:hover {
 #side-links .nav-cr {
     position:fixed;
     bottom:10px;
-}
- 
-.nav-cr i {
-    font-size:1.2em;
-    color:{color:background};
-    background:{color:title};
-    padding:8px;
-    border-radius:30px;
-    margin:10px;
-    border:1px solid {color:borders};
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
- 
-.nav-cr i:hover {
-    color:{color:title};
-    background:{color:background};
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
 }
  
 /*---- UPDATES ----*/
@@ -631,7 +601,6 @@ article {
  
 #pinned {
     position:relative;
-    margin-top:50px;
     margin-bottom:calc(-{text:post margin}px + 20px);
     width:{select:post width};
     padding:20px;
@@ -1142,7 +1111,7 @@ ol.notes li.note img.avatar {
 <body>
  
 <!----- SIDEBAR ----->
- 
+
 <aside id="sidebar">
     <div class="side">
         <div class="title"><a href="/">{Title}</a></div>
@@ -1224,9 +1193,6 @@ ol.notes li.note img.avatar {
         {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
     </nav>
     <!-- CREDIT: DON'T TOUCH -->
-    <div class="nav-cr">
-        <a title="cotton candy theme by sage" href="https://demontimes.tumblr.com"><i class="ph-ghost"></i></a>
-    </div>
 </div>
  
 <!-- main = main container -->
@@ -1527,15 +1493,14 @@ ol.notes li.note img.avatar {
  
 /// photoset
 
-    /// Custom birthday calculator by jack https://youtube.com/nowyouseeit
-    function calculateAge(birthday) {
-      return Math.abs(new Date(Date.now() - birthday).getUTCFullYear() - 1970);
-    }
+/// Custom birthday calculator by jack https://youtube.com/nowyouseeit
+function calculateAge(birthday) {
+    return Math.abs(new Date(Date.now() - birthday).getUTCFullYear() - 1970);
+}
 
-    const birthday = new Date(1998, 9, 7);
-    const age = calculateAge(birthday);
-    document.getElementById("birthday").textContent = age;
-    /// end custom birthday calculator
+const age = calculateAge(new Date(1998, 9, 7));
+document.getElementById("birthday").textContent = age;
+/// end custom birthday calculator
  
 $(document).ready(function(){
    $('.photo-slideshow').pxuPhotoset({
