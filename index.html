@@ -1924,7 +1924,7 @@
             <span>di</span>
           </li>
           <li><br><b>age</b>
-            <span>24</span>
+            <span id="birthday">24</span>
           </li>
           <li><br><b>pronouns</b>
             <span>they/them</span>
@@ -2327,15 +2327,13 @@
     /// photoset
 
     /// Custom birthday calculator by jack https://youtube.com/nowyouseeit
-    function calculateAge(birthday) { // birthday is a date
-      var ageDifMs = Date.now() - birthday;
-      var ageDate = new Date(ageDifMs); // miliseconds from epoch
-      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    function calculateAge(birthday) {
+      return Math.abs(new Date(Date.now() - birthday).getUTCFullYear() - 1970);
     }
 
     const birthday = new Date(1998, 9, 7);
     const age = calculateAge(birthday);
-    document.getElementById("birthday").value = age;
+    document.getElementById("birthday").textContent = age;
     /// end custom birthday calculator
 
     $(document).ready(function () {
