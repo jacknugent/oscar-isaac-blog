@@ -1181,20 +1181,6 @@ ol.notes li.note img.avatar {
     </div>
 </span>
  
-<!---- SIDE NAV ---->    
-    <nav>
-        {block:ifHomeLink}<a title="{text:Home Link}" href="/"><i class="ph ph-house-fill"></i></a>{/block:ifHomeLink}
-        {block:AskEnabled}{block:ifAskLink}<a title="{text:Ask Link}" href="/ask"><i class="ph ph-chat-circle"></i></a>{/block:ifAskLink}{/block:AskEnabled}
-        {block:ifArchiveLink}<a title="{text:Archive Link}" href="/archive"><i class="ph ph-clock-counter-clockwise-fill"></i></a>{/block:ifArchiveLink}
-        {block:SubmissionsEnabled}{block:ifSubmitLink}<a href="/submit"><i class="ph ph-ph ph-envelope--open=simple-fill"></i></a>{/block:ifSubmitLink}{/block:SubmissionsEnabled}
-        {block:ifLink1}<a title="{text:Link 1}" href="{text:Link 1 URL}"><i class= "ph ph-article-fill"-{text:link 1 icon}"></i></a>{/block:ifLink1}
-        {block:ifLink2}<a title="{text:link 2}" href="{text:Link 2 URL}"><i class="ph ph-{text:link 2 icon}"></i></a>{/block:ifLink2}
-        {block:ifLink3}<a title="{text:link 3}" href="{text:Link 3 URL}"><i class="ph ph-{text:link 3 icon}"></i></a>{/block:ifLink3}
-        {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
-    </nav>
-    <!-- CREDIT: DON'T TOUCH -->
-</div>
- 
 <!-- main = main container -->
  
 <main>
